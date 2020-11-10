@@ -1,0 +1,41 @@
+.span{
+    float: right;
+    border: 1px solid black;
+    background-color: rgb(233, 233, 233);
+    padding: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+h2{
+    margin: 5%;
+    border: 2px solid gray;
+    padding: 20px;
+}
+hr{
+size: 19px;
+}
+h1{
+    text-align: center;
+}
+.note{
+    float:right;
+    font-weight: bold;
+    color: red;
+    font-size: 20px;
+}
+.item{
+    background-color: rgb(189, 189, 189);
+}
+.label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.return{
+margin-left: 30px;}
+
+.card{
+    padding: 10px;
+    padding-bottom: 20px;
+    justify-content: center;
+}

@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Score</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+  <ion-content>
+    <h1>Mes scores</h1>
+    <div *ngIf="lesson">
+      <h2 class="item">Histoire <span class="span" (click)="passe()">Voir</span></h2>
+      <h2 class="item">Geographie<span class="span">Voir</span></h2>  
+    </div>
+
+    <div *ngIf="passer>0">
+      <ion-card class="card" >
+      <ion-list>
+        <ion-item>
+          <ion-label class="label">Le Walo</ion-label>
+          <span class="note">2/3</span>
+        </ion-item>
+        <ion-item class="label">
+          <ion-label>Le Cayor</ion-label>
+          <span class="note">../3</span>
+        </ion-item>
+        <ion-item class="label">
+          <ion-label>La prehistoire</ion-label>
+          <span class="note">../3</span>
+        </ion-item>
+      
+      </ion-list>    
+     <ion-button class="return" (click)="back()"> <ion-icon slot="end" name="arrow-back"></ion-icon> Return</ion-button>
+    </ion-card>
+    </div>
+   
+  </ion-content>

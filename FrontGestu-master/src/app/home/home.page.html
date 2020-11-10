@@ -1,0 +1,21 @@
+
+
+<ion-content [fullscreen]="true">
+
+ 
+  <div id="container" class="card">
+    <h1>LOGIN</h1>
+    <form [formGroup]="user">
+      <ion-item>
+        <ion-label><ion-icon slot="end" name="person"></ion-icon> Username</ion-label>
+        <ion-input type="text" formControlName="username" name="username"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label><ion-icon slot="end" name="key"></ion-icon> Password</ion-label>
+        <ion-input type="text" formControlName="password" name="password"></ion-input>
+      </ion-item>
+      <ion-button ion-button class="btn" type="submit" block (click)="login">Valider</ion-button>
+    </form>
+  </div>
+
+</ion-content>

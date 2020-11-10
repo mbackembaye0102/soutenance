@@ -1,0 +1,66 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>quizz</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card-header *ngIf="connaitre">
+    <ion-card-title class="title">HISTOIRE : Le Walo</ion-card-title>
+  </ion-card-header>
+
+  <ion-card class="card" *ngIf="premier">
+    <ion-card-title class="question">1) Quel titre portait le roi du walo ?</ion-card-title>
+
+      <div class="reponse" (click)="pf(0,'damel')">
+        <a routerLink="#" id="qu"><span>Damel</span> </a> 
+      </div>
+      <div class="reponse" (click)="pf(1,'bourba')">
+        <a routerLink="#" id="qu"><span>Bourba</span> </a> 
+      </div>
+      <div class="reponse" (click)="pf(0,'tegne')">
+        <a routerLink="#" id="qu"><span>Tegne</span> </a> 
+      </div>
+  </ion-card>
+
+  <ion-card class="card animate__bounceInLeft" *ngIf="deuxieme">
+    <ion-card-title class="question"> 2) Quel titre portait le roi du Mali?</ion-card-title>
+
+      <div class="reponse" (click)="df(0,'gurogui')">
+        <a routerLink="#" id="qu"><span>Guorgui</span> </a> 
+      </div>
+      <div class="reponse" (click)="df(0,'kanka')">
+        <a routerLink="#" id="qu"><span>Kanka</span> </a> 
+      </div>
+      <div class="reponse" (click)="df(1,'mansa')">
+        <a routerLink="#" id="qu"><span>Mansa</span> </a> 
+      </div>
+  </ion-card>
+
+  <ion-card class="card" *ngIf="troisieme">
+    <ion-card-title class="question"> 3) Quel titre portait le roi du Ghana ?</ion-card-title>
+
+      <div class="reponse" (click)="tf(1,'tounka')">
+        <a routerLink="" id="qu"><span>Tounka</span> </a> 
+      </div>
+      <div class="reponse" (click)="tf(0,'fouta')">
+        <a routerLink="#" id="qu"><span>Fouta</span> </a> 
+      </div>
+      <div class="reponse" (click)="tf(0,'berbere')">
+        <a routerLink="#" id="qu"><span>Berbere</span> </a> 
+      </div>
+  </ion-card>
+<div >
+  <ion-card class="card" *ngIf="resultat">
+    <h3>Merci d'avoir joue a cette partie </h3>
+    <p  id="score">Vous avez obtenu <span style="color: #FF4080; font-size:30px;"> {{cpt}}</span>  points sur <span style="color: #FF4080; font-size:30px;">3</span> </p>
+    <div class="restart">
+      <ion-button  (click)="back()"> <ion-icon slot="end" name="arrow-back"></ion-icon> Accueil</ion-button>
+    </div>
+  </ion-card>
+
+</div>
+</ion-content>
